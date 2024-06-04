@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h2>Final Results</h2>
+</head>
+<body> -->
+    <!-- {% if result>=50 %}
+    <h1>your result is passed</h1>
+    {% else %}
+    <h1>your result is failed</h1>
+    {% endif %} -->
+    <!-- <table>
+
+        {% for key,value in result.items() %}
+        <tr>
+            <th>{{ key }}</th>
+            <th>{{ value }}</th>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result Page</h1>
+    <!-- Access the 'score' key from the 'result' dictionary -->
+    {% if result['score'] >= 50 %}
+        <p>Congratulations! Your score is {{ result['score'] }}. {{ result['message'] }}</p>
+    {% else %}
+        <p>Sorry, you did not pass. Your score is {{ result['score'] }}.</p>
+    {% endif %}
+    <ul>
+        {% for key, value in result.items() %}
+            <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
